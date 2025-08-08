@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kailash Rolling Shutter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding-bottom: 180px; /* enough space for contact + footer */
+      background: #f9f9f9;
+    }
+    header {
+      background: #004aad;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #0066cc;
+    }
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    nav a:hover {
+      background: #004aad;
+    }
+    section {
+      padding: 30px;
+      text-align: center;
+    }
+    .products, .about {
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      max-width: 800px;
+      text-align: left;
+      display: none; /* hidden by default */
+    }
+    .products h2, .about h2 {
+      text-align: center;
+      color: #004aad;
+    }
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: white;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    }
+    .contact {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+      width: 100%;
+      background: white;
+      border-top: 2px solid #ccc;
+    }
+    .contact button {
+      padding: 15px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      flex: 1;
+      max-width: 200px;
+    }
+    .call {
+      background: #ff6600;
+      color: white;
+    }
+    .inquiry {
+      background: #0066cc;
+      color: white;
+    }
+    footer {
+      width: 100%;
+      background: #004aad;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Kailash Rolling Shutter</h1>
+  <p>Khamgaon, Maharashtra</p>
+</header>
+
+<nav>
+  <a onclick="showSection('products')">Our Products</a>
+  <a onclick="showSection('about')">About Us</a>
+</nav>
+
+<section id="products" class="products">
+  
+</section>
+
+<section id="about" class="about">
+  <h2>About Us</h2>
+  <p><strong>Name:</strong> Kailash Rolling Shutter</p>
+  <p><strong>Address:</strong> Baradari</p>
+  <p><strong>Contact:</strong></p>
+  <ul>
+    <li>Bhushan Jadhao - <a href="tel:8552860907">8552860907</a></li>
+    <li>Saurabh Jadhao - <a href="tel:9028467256">9028467256</a></li>
+  </ul>
+</section>
+<div class="bottom-bar">
+  <div class="contact">
+    <button class="call" onclick="window.location.href='tel:8552860907'">📞 Call Now</button>
+    <button class="inquiry" onclick="window.location.href='omjadhao520@gmail.com'">✉️ Send Inquiry</button>
+  </div>
+  <footer>
+    <p>On Top Kailash Rolling Shutter since 1975</p>
+  </footer>
+</div>
+
+<script>
+  function showSection(sectionId) {
+    document.getElementById('products').style.display = 'none';
+    document.getElementById('about').style.display = 'none';
+    document.getElementById(sectionId).style.display = 'block';
+  }
+  // Show products by default
+  showSection('products');
+</script>
+
+</body>
+</html>
